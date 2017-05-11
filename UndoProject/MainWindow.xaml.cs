@@ -23,6 +23,8 @@ namespace UndoProject
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Closed += (s, e) => (this.DataContext as IDisposable).Dispose();
         }
     }
 }
